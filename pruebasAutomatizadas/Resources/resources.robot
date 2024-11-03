@@ -22,4 +22,8 @@ ${is_alert_open}    False
 ${COLUMN_A}    css:#column-a
 ${COLUMN_B}    css:#column-b
 
+#RESOURCES - TEST CASES 7, 8, 9
+${URL_DYNAMIC_CONTROLS}    https://the-internet.herokuapp.com/dynamic_controls
+${URL_FLOATING_MENU}    https://the-internet.herokuapp.com/floating_menu
+${URL_LOGIN}    https://the-internet.herokuapp.com/login
 

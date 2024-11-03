@@ -1,6 +1,7 @@
 *** Keywords ***
 Inicializar navegador
-    open browser            ${URL}             ${BROWSER}
+    [Arguments]     ${url}
+    open browser            ${url}             ${BROWSER}
     maximize browser window
     Sleep                   2s
 
