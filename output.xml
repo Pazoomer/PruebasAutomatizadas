@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2024-11-03T09:55:40.644483" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot-Scripts" source="C:\development\robot-scripts">
+<suite id="s1-s1" name="pruebasAutomatizadas" source="C:\development\robot-scripts\pruebasAutomatizadas">
+<suite id="s1-s1-s1" name="Tests" source="C:\development\robot-scripts\pruebasAutomatizadas\Tests">
+<suite id="s1-s1-s1-s1" name="456TestCase" source="C:\development\robot-scripts\pruebasAutomatizadas\Tests\456TestCase.robot">
+<test id="s1-s1-s1-s1-t1" name="Context Menu" line="6">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-03T09:55:40.992025" level="FAIL">Variable '${URL_CONTEXT_MENU}' not found.</msg>
+<arg>${URL_CONTEXT_MENU}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-11-03T09:55:40.991090" elapsed="0.001077">Variable '${URL_CONTEXT_MENU}' not found.</status>
+</kw>
+<kw name="Click Right Button">
+<arg>css:#hot-spot</arg>
+<status status="NOT RUN" start="2024-11-03T09:55:40.992552" elapsed="0.000056"/>
+</kw>
+<kw name="Get Alert Text">
+<var>${alert_text}</var>
+<status status="NOT RUN" start="2024-11-03T09:55:40.992790" elapsed="0.000038"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${alert_text}</arg>
+<arg>You selected a context menu</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2024-11-03T09:55:40.992973" elapsed="0.000038"/>
+</kw>
+<kw name="Accept Alert">
+<status status="NOT RUN" start="2024-11-03T09:55:40.993148" elapsed="0.000034"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${is_alert_open}</var>
+<arg>Get Alert Text</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-11-03T09:55:40.993319" elapsed="0.000036"/>
+</kw>
+<kw name="Should Be False">
+<arg>${is_alert_open}</arg>
+<status status="NOT RUN" start="2024-11-03T09:55:40.993487" elapsed="0.000032"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-03T09:55:40.993833" elapsed="0.000199"/>
+</kw>
+<doc>Este caso de prueba verifica la funcionalidad del menú contextual.</doc>
+<status status="FAIL" start="2024-11-03T09:55:40.989210" elapsed="0.004902">Variable '${URL_CONTEXT_MENU}' not found.</status>
+</test>
+<status status="FAIL" start="2024-11-03T09:55:40.704371" elapsed="0.290268"/>
+</suite>
+<status status="FAIL" start="2024-11-03T09:55:40.702939" elapsed="0.292493"/>
+</suite>
+<status status="FAIL" start="2024-11-03T09:55:40.701360" elapsed="0.294637"/>
+</suite>
+<status status="FAIL" start="2024-11-03T09:55:40.648264" elapsed="0.348207"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robot-Scripts">Robot-Scripts</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="pruebasAutomatizadas">Robot-Scripts.pruebasAutomatizadas</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Tests">Robot-Scripts.pruebasAutomatizadas.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="456TestCase">Robot-Scripts.pruebasAutomatizadas.Tests.456TestCase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
