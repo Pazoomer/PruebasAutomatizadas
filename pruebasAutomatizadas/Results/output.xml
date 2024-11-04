@@ -1,0 +1,2196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.13.0 on win32)" generated="2024-11-03T17:51:34.430688" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCases1 10" source="D:\Documents\GitHub\PruebasAutomatizadas\pruebasAutomatizadas\Tests\TestCases1_10.robot">
+<test id="s1-t1" name="Agregar y Quitar Elementos" line="8">
+<kw name="Inicializar navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:34.653329" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/add_remove_elements/'.</msg>
+<msg time="2024-11-03T17:51:34.933770" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-03T17:51:34.653127" elapsed="2.488066"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-03T17:51:37.141627" elapsed="0.029672"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:51:38.171960" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:51:37.171497" elapsed="1.000569"/>
+</kw>
+<arg>${URL_ANADIR_REMOVER_ELEMENTOS}</arg>
+<status status="PASS" start="2024-11-03T17:51:34.652519" elapsed="3.519654"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.172946" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.172675" elapsed="0.042165"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.222658" level="INFO">${elements} = 1</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.215041" elapsed="0.007660"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.222867" elapsed="0.000645"/>
+</kw>
+<var name="${index}">0</var>
+<status status="PASS" start="2024-11-03T17:51:38.172568" elapsed="0.050995"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.223890" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.223760" elapsed="0.028921"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.257570" level="INFO">${elements} = 2</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.252875" elapsed="0.004733"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.257757" elapsed="0.000565"/>
+</kw>
+<var name="${index}">1</var>
+<status status="PASS" start="2024-11-03T17:51:38.223682" elapsed="0.034689"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.258680" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.258557" elapsed="0.026622"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.290368" level="INFO">${elements} = 3</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.285348" elapsed="0.005060"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.290559" elapsed="0.000539"/>
+</kw>
+<var name="${index}">2</var>
+<status status="PASS" start="2024-11-03T17:51:38.258484" elapsed="0.032661"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.291442" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.291318" elapsed="0.028272"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.324158" level="INFO">${elements} = 4</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.319779" elapsed="0.004412"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.324322" elapsed="0.000539"/>
+</kw>
+<var name="${index}">3</var>
+<status status="PASS" start="2024-11-03T17:51:38.291247" elapsed="0.033660"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.325203" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.325083" elapsed="0.026931"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.356913" level="INFO">${elements} = 5</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.352192" elapsed="0.004756"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.357091" elapsed="0.000538"/>
+</kw>
+<var name="${index}">4</var>
+<status status="PASS" start="2024-11-03T17:51:38.325009" elapsed="0.032669"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.357975" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.357852" elapsed="0.026600"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.389278" level="INFO">${elements} = 6</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.384642" elapsed="0.004669"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.389448" elapsed="0.000532"/>
+</kw>
+<var name="${index}">5</var>
+<status status="PASS" start="2024-11-03T17:51:38.357779" elapsed="0.032403"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.390483" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.390363" elapsed="0.027035"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.422402" level="INFO">${elements} = 7</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.417563" elapsed="0.004875"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.422576" elapsed="0.000539"/>
+</kw>
+<var name="${index}">6</var>
+<status status="PASS" start="2024-11-03T17:51:38.390292" elapsed="0.032870"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.423456" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.423337" elapsed="0.026944"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.455475" level="INFO">${elements} = 8</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.450452" elapsed="0.005060"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.455662" elapsed="0.000533"/>
+</kw>
+<var name="${index}">7</var>
+<status status="PASS" start="2024-11-03T17:51:38.423267" elapsed="0.032975"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.456540" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.456416" elapsed="0.026723"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.488519" level="INFO">${elements} = 9</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.483403" elapsed="0.005154"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.488704" elapsed="0.000537"/>
+</kw>
+<var name="${index}">8</var>
+<status status="PASS" start="2024-11-03T17:51:38.456342" elapsed="0.032946"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.489578" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.489458" elapsed="0.026711"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.521862" level="INFO">${elements} = 10</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.516436" elapsed="0.005464"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.522045" elapsed="0.000531"/>
+</kw>
+<var name="${index}">9</var>
+<status status="PASS" start="2024-11-03T17:51:38.489388" elapsed="0.033235"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.522917" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.522798" elapsed="0.026601"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.554731" level="INFO">${elements} = 11</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.549571" elapsed="0.005208"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.554929" elapsed="0.000544"/>
+</kw>
+<var name="${index}">10</var>
+<status status="PASS" start="2024-11-03T17:51:38.522728" elapsed="0.032791"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.555825" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.555692" elapsed="0.029091"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.589973" level="INFO">${elements} = 12</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.585013" elapsed="0.004991"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.590130" elapsed="0.000537"/>
+</kw>
+<var name="${index}">11</var>
+<status status="PASS" start="2024-11-03T17:51:38.555621" elapsed="0.035093"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.591010" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.590893" elapsed="0.026801"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.622664" level="INFO">${elements} = 13</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.617879" elapsed="0.004814"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.622817" elapsed="0.000523"/>
+</kw>
+<var name="${index}">12</var>
+<status status="PASS" start="2024-11-03T17:51:38.590824" elapsed="0.032562"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.623672" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.623555" elapsed="0.026778"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.655757" level="INFO">${elements} = 14</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.650530" elapsed="0.005377"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.656046" elapsed="0.000534"/>
+</kw>
+<var name="${index}">13</var>
+<status status="PASS" start="2024-11-03T17:51:38.623487" elapsed="0.033139"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.656916" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.656795" elapsed="0.032178"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.694990" level="INFO">${elements} = 15</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.689150" elapsed="0.005878"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.695177" elapsed="0.000581"/>
+</kw>
+<var name="${index}">14</var>
+<status status="PASS" start="2024-11-03T17:51:38.656726" elapsed="0.039080"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.696114" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.695989" elapsed="0.030913"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.732103" level="INFO">${elements} = 16</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.727077" elapsed="0.005062"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.732279" elapsed="0.000639"/>
+</kw>
+<var name="${index}">15</var>
+<status status="PASS" start="2024-11-03T17:51:38.695919" elapsed="0.037052"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.733278" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.733155" elapsed="0.029697"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.768742" level="INFO">${elements} = 17</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.763044" elapsed="0.005741"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.768941" elapsed="0.000551"/>
+</kw>
+<var name="${index}">16</var>
+<status status="PASS" start="2024-11-03T17:51:38.733081" elapsed="0.036459"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.769832" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.769712" elapsed="0.029941"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.806093" level="INFO">${elements} = 18</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.799827" elapsed="0.006320"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.806361" elapsed="0.000622"/>
+</kw>
+<var name="${index}">17</var>
+<status status="PASS" start="2024-11-03T17:51:38.769643" elapsed="0.037392"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.808187" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.807223" elapsed="0.036074"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.851396" level="INFO">${elements} = 19</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.843471" elapsed="0.007974"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.851650" elapsed="0.000593"/>
+</kw>
+<var name="${index}">18</var>
+<status status="PASS" start="2024-11-03T17:51:38.807149" elapsed="0.045144"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.852690" level="INFO">Clicking button 'css:button[onclick="addElement()"]'.</msg>
+<arg>css:button[onclick="addElement()"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.852498" elapsed="0.035221"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.892870" level="INFO">${elements} = 20</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.887888" elapsed="0.005014"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${index + 1}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.893032" elapsed="0.000532"/>
+</kw>
+<var name="${index}">19</var>
+<status status="PASS" start="2024-11-03T17:51:38.852412" elapsed="0.041198"/>
+</iter>
+<var>${index}</var>
+<value>20</value>
+<status status="PASS" start="2024-11-03T17:51:38.172361" elapsed="0.721297"/>
+</for>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.894163" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.894048" elapsed="0.035780"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:38.930249" level="INFO">${expected_count} = 19</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.930000" elapsed="0.000275"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.935625" level="INFO">${elements} = 19</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.930373" elapsed="0.005290"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.935853" elapsed="0.000183"/>
+</kw>
+<var name="${index}">0</var>
+<status status="PASS" start="2024-11-03T17:51:38.893973" elapsed="0.042111"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.936376" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.936261" elapsed="0.027607"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:38.964274" level="INFO">${expected_count} = 18</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.964037" elapsed="0.000263"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.970177" level="INFO">${elements} = 18</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.964393" elapsed="0.005821"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.970358" elapsed="0.000182"/>
+</kw>
+<var name="${index}">1</var>
+<status status="PASS" start="2024-11-03T17:51:38.936191" elapsed="0.034397"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:38.970874" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.970761" elapsed="0.027129"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:38.998283" level="INFO">${expected_count} = 17</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.998058" elapsed="0.000252"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.004110" level="INFO">${elements} = 17</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:38.998401" elapsed="0.005746"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.004294" elapsed="0.000182"/>
+</kw>
+<var name="${index}">2</var>
+<status status="PASS" start="2024-11-03T17:51:38.970691" elapsed="0.033830"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.004814" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.004699" elapsed="0.027618"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:39.032819" level="INFO">${expected_count} = 16</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.032536" elapsed="0.000319"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.038182" level="INFO">${elements} = 16</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.032975" elapsed="0.005240"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.038341" elapsed="0.000174"/>
+</kw>
+<var name="${index}">3</var>
+<status status="PASS" start="2024-11-03T17:51:39.004628" elapsed="0.033930"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.038845" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.038735" elapsed="0.027492"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:39.066626" level="INFO">${expected_count} = 15</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.066403" elapsed="0.000248"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.071511" level="INFO">${elements} = 15</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.066745" elapsed="0.004796"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.071653" elapsed="0.000169"/>
+</kw>
+<var name="${index}">4</var>
+<status status="PASS" start="2024-11-03T17:51:39.038665" elapsed="0.033200"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.072144" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.072036" elapsed="0.027592"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:39.100029" level="INFO">${expected_count} = 14</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.099809" elapsed="0.000245"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.105050" level="INFO">${elements} = 14</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.100144" elapsed="0.004936"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.105199" elapsed="0.000181"/>
+</kw>
+<var name="${index}">5</var>
+<status status="PASS" start="2024-11-03T17:51:39.071969" elapsed="0.033455"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.105710" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.105598" elapsed="0.027420"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:39.133410" level="INFO">${expected_count} = 13</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.133187" elapsed="0.000248"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.138376" level="INFO">${elements} = 13</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.133652" elapsed="0.004755"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.138520" elapsed="0.000163"/>
+</kw>
+<var name="${index}">6</var>
+<status status="PASS" start="2024-11-03T17:51:39.105529" elapsed="0.033200"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.139005" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.138901" elapsed="0.028960"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:39.168442" level="INFO">${expected_count} = 12</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.168083" elapsed="0.000404"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.174479" level="INFO">${elements} = 12</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.168646" elapsed="0.005874"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.174672" elapsed="0.000187"/>
+</kw>
+<var name="${index}">7</var>
+<status status="PASS" start="2024-11-03T17:51:39.138832" elapsed="0.036073"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.175196" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.175082" elapsed="0.029167"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:39.204637" level="INFO">${expected_count} = 11</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.204418" elapsed="0.000243"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.209113" level="INFO">${elements} = 11</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.204751" elapsed="0.004389"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.209241" elapsed="0.000161"/>
+</kw>
+<var name="${index}">8</var>
+<status status="PASS" start="2024-11-03T17:51:39.175013" elapsed="0.034434"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.209719" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.209616" elapsed="0.027797"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:39.237798" level="INFO">${expected_count} = 10</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.237579" elapsed="0.000247"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.242224" level="INFO">${elements} = 10</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.237919" elapsed="0.004332"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.242357" elapsed="0.000158"/>
+</kw>
+<var name="${index}">9</var>
+<status status="PASS" start="2024-11-03T17:51:39.209550" elapsed="0.033009"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.242833" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.242727" elapsed="0.027425"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:39.270560" level="INFO">${expected_count} = 9</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.270317" elapsed="0.000268"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.275106" level="INFO">${elements} = 9</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.270676" elapsed="0.004458"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.275240" elapsed="0.000166"/>
+</kw>
+<var name="${index}">10</var>
+<status status="PASS" start="2024-11-03T17:51:39.242660" elapsed="0.032791"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.275728" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.275619" elapsed="0.027663"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:39.303680" level="INFO">${expected_count} = 8</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.303455" elapsed="0.000250"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.308059" level="INFO">${elements} = 8</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.303798" elapsed="0.004289"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.308189" elapsed="0.000156"/>
+</kw>
+<var name="${index}">11</var>
+<status status="PASS" start="2024-11-03T17:51:39.275553" elapsed="0.032838"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.308660" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.308557" elapsed="0.027738"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:39.336688" level="INFO">${expected_count} = 7</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.336466" elapsed="0.000248"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.341066" level="INFO">${elements} = 7</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.336806" elapsed="0.004297"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.341215" elapsed="0.000164"/>
+</kw>
+<var name="${index}">12</var>
+<status status="PASS" start="2024-11-03T17:51:39.308491" elapsed="0.032936"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.341720" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.341601" elapsed="0.028107"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:39.370097" level="INFO">${expected_count} = 6</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.369875" elapsed="0.000248"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.374568" level="INFO">${elements} = 6</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.370213" elapsed="0.004387"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.374719" elapsed="0.000169"/>
+</kw>
+<var name="${index}">13</var>
+<status status="PASS" start="2024-11-03T17:51:39.341531" elapsed="0.033403"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.375219" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.375108" elapsed="0.027515"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:39.403027" level="INFO">${expected_count} = 5</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.402790" elapsed="0.000262"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.407602" level="INFO">${elements} = 5</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.403146" elapsed="0.004485"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.407741" elapsed="0.000162"/>
+</kw>
+<var name="${index}">14</var>
+<status status="PASS" start="2024-11-03T17:51:39.375040" elapsed="0.032906"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.408231" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.408124" elapsed="0.027766"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:39.436419" level="INFO">${expected_count} = 4</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.436136" elapsed="0.000311"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.440770" level="INFO">${elements} = 4</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.436573" elapsed="0.004227"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.440905" elapsed="0.000162"/>
+</kw>
+<var name="${index}">15</var>
+<status status="PASS" start="2024-11-03T17:51:39.408055" elapsed="0.033054"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.441385" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.441279" elapsed="0.027037"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:39.468700" level="INFO">${expected_count} = 3</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.468478" elapsed="0.000247"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.473089" level="INFO">${elements} = 3</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.468816" elapsed="0.004303"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.473221" elapsed="0.000157"/>
+</kw>
+<var name="${index}">16</var>
+<status status="PASS" start="2024-11-03T17:51:39.441211" elapsed="0.032210"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.473706" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.473597" elapsed="0.027122"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:39.501105" level="INFO">${expected_count} = 2</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.500887" elapsed="0.000243"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.505409" level="INFO">${elements} = 2</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.501224" elapsed="0.004213"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.505542" elapsed="0.000159"/>
+</kw>
+<var name="${index}">17</var>
+<status status="PASS" start="2024-11-03T17:51:39.473525" elapsed="0.032329"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.506139" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.506029" elapsed="0.028292"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:39.534717" level="INFO">${expected_count} = 1</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.534494" elapsed="0.000248"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.539160" level="INFO">${elements} = 1</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.534836" elapsed="0.004354"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.539304" elapsed="0.000164"/>
+</kw>
+<var name="${index}">18</var>
+<status status="PASS" start="2024-11-03T17:51:39.505960" elapsed="0.033551"/>
+</iter>
+<iter>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.539811" level="INFO">Clicking button 'css:.added-manually:first-child'.</msg>
+<arg>css:.added-manually:first-child</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.539695" elapsed="0.026941"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-03T17:51:39.567029" level="INFO">${expected_count} = 0</msg>
+<var>${expected_count}</var>
+<arg>20 - ${index} - 1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.566813" elapsed="0.000242"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:39.571235" level="INFO">${elements} = 0</msg>
+<var>${elements}</var>
+<arg>css:.added-manually</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.567151" elapsed="0.004113"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${elements}</arg>
+<arg>${expected_count}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.571366" elapsed="0.000156"/>
+</kw>
+<var name="${index}">19</var>
+<status status="PASS" start="2024-11-03T17:51:39.539615" elapsed="0.031950"/>
+</iter>
+<var>${index}</var>
+<value>20</value>
+<status status="PASS" start="2024-11-03T17:51:38.893835" elapsed="0.677778"/>
+</for>
+<kw name="Cerrar el navegador" owner="keywords" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:51:40.572520" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:51:39.572139" elapsed="1.000486"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-03T17:51:40.572780" elapsed="2.119364"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:51:39.571914" elapsed="3.120351"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:51:34.651961" elapsed="8.040524"/>
+</test>
+<test id="s1-t2" name="Autenticación Básica" line="24">
+<kw name="Inicializar navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:42.693676" level="INFO">Opening browser 'chrome' to base url 'https://admin:admin@the-internet.herokuapp.com/basic_auth'.</msg>
+<msg time="2024-11-03T17:51:42.928234" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-03T17:51:42.693509" elapsed="2.441970"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-03T17:51:45.135663" elapsed="0.024516"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:51:46.160818" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:51:45.160363" elapsed="1.000561"/>
+</kw>
+<arg>${URL_BASIC_AUTH}</arg>
+<status status="PASS" start="2024-11-03T17:51:42.693233" elapsed="3.467788"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:46.177693" level="INFO">${message} = Congratulations! You must have the proper credentials.</msg>
+<var>${message}</var>
+<arg>css:p</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:46.161268" elapsed="0.016466"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>${MENSAJE_EXITO}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-11-03T17:51:46.177962" elapsed="0.000160"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-03T17:51:46.178252" elapsed="2.098571"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:48.277321" level="INFO">Opening browser 'chrome' to base url 'https://admin1:admin1@the-internet.herokuapp.com/basic_auth'.</msg>
+<msg time="2024-11-03T17:51:48.511398" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${URL_BASIC_AUTH_FAIL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-03T17:51:48.277114" elapsed="1.761054"/>
+</kw>
+<kw name="Get Source" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:50.040884" level="INFO">${failed_message} = &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</msg>
+<var>${failed_message}</var>
+<doc>Returns the entire HTML source of the current page or frame.</doc>
+<status status="PASS" start="2024-11-03T17:51:50.038446" elapsed="0.002481"/>
+</kw>
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${failed_message}</arg>
+<arg>${MENSAJE_EXITO}</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2024-11-03T17:51:50.041187" elapsed="0.000175"/>
+</kw>
+<kw name="Cerrar el navegador" owner="keywords" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:51:51.042019" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:51:50.041808" elapsed="1.000313"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-03T17:51:51.042282" elapsed="2.090241"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:51:50.041608" elapsed="3.091031"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:51:42.692908" elapsed="10.439884"/>
+</test>
+<test id="s1-t3" name="Checkboxes" line="35">
+<kw name="Inicializar navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:53.133927" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/checkboxes'.</msg>
+<msg time="2024-11-03T17:51:53.365886" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-03T17:51:53.133766" elapsed="2.359833"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-03T17:51:55.493957" elapsed="0.029478"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:51:56.524237" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:51:55.523596" elapsed="1.000746"/>
+</kw>
+<arg>${URL_CHECKBOXES}</arg>
+<status status="PASS" start="2024-11-03T17:51:53.133499" elapsed="3.390940"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:56.525099" level="INFO">Verifying checkbox 'xpath://form[@id='checkboxes']/input[1]' is selected.</msg>
+<msg time="2024-11-03T17:51:56.685191" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-03T17:51:56.685342" level="FAIL">Checkbox 'xpath://form[@id='checkboxes']/input[1]' should have been selected but was not.</msg>
+<arg>xpath://form[@id='checkboxes']/input[1]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="FAIL" start="2024-11-03T17:51:56.524952" elapsed="0.161993">Checkbox 'xpath://form[@id='checkboxes']/input[1]' should have been selected but was not.</status>
+</kw>
+<msg time="2024-11-03T17:51:56.687068" level="INFO">${is_selected} = False</msg>
+<var>${is_selected}</var>
+<arg>Checkbox Should Be Selected</arg>
+<arg>xpath://form[@id='checkboxes']/input[1]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-03T17:51:56.524765" elapsed="0.162327"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_selected}' == 'False'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:56.687627" level="INFO">Clicking element 'xpath://form[@id='checkboxes']/input[1]'.</msg>
+<arg>xpath://form[@id='checkboxes']/input[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:51:56.687475" elapsed="0.036335"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:51:56.687270" elapsed="0.036629"/>
+</branch>
+<status status="PASS" start="2024-11-03T17:51:56.687244" elapsed="0.036712"/>
+</if>
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:56.724348" level="INFO">Verifying checkbox 'xpath://form[@id='checkboxes']/input[1]' is selected.</msg>
+<arg>xpath://form[@id='checkboxes']/input[1]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="PASS" start="2024-11-03T17:51:56.724175" elapsed="0.016912"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:56.741675" level="INFO">Verifying checkbox 'xpath://form[@id='checkboxes']/input[2]' is selected.</msg>
+<arg>xpath://form[@id='checkboxes']/input[2]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="PASS" start="2024-11-03T17:51:56.741536" elapsed="0.017448"/>
+</kw>
+<msg time="2024-11-03T17:51:56.759113" level="INFO">${is_selected} = True</msg>
+<var>${is_selected}</var>
+<arg>Checkbox Should Be Selected</arg>
+<arg>xpath://form[@id='checkboxes']/input[2]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-03T17:51:56.741352" elapsed="0.017786"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_selected}' == 'False'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath://form[@id='checkboxes']/input[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-11-03T17:51:56.759515" elapsed="0.000025"/>
+</kw>
+<status status="NOT RUN" start="2024-11-03T17:51:56.759308" elapsed="0.000270"/>
+</branch>
+<status status="PASS" start="2024-11-03T17:51:56.759284" elapsed="0.000330"/>
+</if>
+<kw name="Checkbox Should Be Selected" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:56.759866" level="INFO">Verifying checkbox 'xpath://form[@id='checkboxes']/input[2]' is selected.</msg>
+<arg>xpath://form[@id='checkboxes']/input[2]</arg>
+<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
+<status status="PASS" start="2024-11-03T17:51:56.759722" elapsed="0.014492"/>
+</kw>
+<kw name="Cerrar el navegador" owner="keywords" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:51:57.775311" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:51:56.774758" elapsed="1.000663"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-03T17:51:57.775579" elapsed="2.105308"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:51:56.774544" elapsed="3.106461"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:51:53.133194" elapsed="6.748019"/>
+</test>
+<test id="s1-t4" name="Context Menu" line="50">
+<kw name="Inicializar navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:51:59.882429" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/context_menu'.</msg>
+<msg time="2024-11-03T17:52:00.118260" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-03T17:51:59.882264" elapsed="2.371149"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-03T17:52:02.253610" elapsed="0.035069"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:03.289551" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:02.288889" elapsed="1.000769"/>
+</kw>
+<arg>${url_context_menu}</arg>
+<status status="PASS" start="2024-11-03T17:51:59.881983" elapsed="3.407774"/>
+</kw>
+<kw name="Open Context Menu" owner="SeleniumLibrary">
+<arg>css:#hot-spot</arg>
+<doc>Opens the context menu on the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:52:03.289979" elapsed="0.273622"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:04.564645" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:03.563943" elapsed="1.000809"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${alert_text}</arg>
+<arg>You selected a context menu</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-03T17:52:04.564988" elapsed="0.000245"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Get Alert Text">
+<msg time="2024-11-03T17:52:04.566780" level="FAIL">No keyword with name 'Get Alert Text' found.</msg>
+<status status="FAIL" start="2024-11-03T17:52:04.566742" elapsed="0.000075">No keyword with name 'Get Alert Text' found.</status>
+</kw>
+<msg time="2024-11-03T17:52:04.566901" level="INFO">${is_alert_open} = False</msg>
+<var>${is_alert_open}</var>
+<arg>Get Alert Text</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-03T17:52:04.565378" elapsed="0.001545"/>
+</kw>
+<kw name="Should Not Be True" owner="BuiltIn">
+<arg>${is_alert_open}</arg>
+<doc>Fails if the given condition is true.</doc>
+<status status="PASS" start="2024-11-03T17:52:04.567053" elapsed="0.000118"/>
+</kw>
+<kw name="Cerrar el navegador" owner="keywords" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:05.568018" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:04.567557" elapsed="1.000565"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-03T17:52:05.568279" elapsed="2.115751"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:52:04.567372" elapsed="3.116785"/>
+</kw>
+<doc>Este caso de prueba verifica la funcionalidad del menú contextual.</doc>
+<status status="PASS" start="2024-11-03T17:51:59.881620" elapsed="7.802743"/>
+</test>
+<test id="s1-t5" name="Elementos Que Desaparecen" line="62">
+<kw name="Inicializar navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:07.685716" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/disappearing_elements'.</msg>
+<msg time="2024-11-03T17:52:07.917752" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-03T17:52:07.685547" elapsed="2.350843"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-03T17:52:10.036721" elapsed="0.038655"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:11.075752" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:10.075544" elapsed="1.000314"/>
+</kw>
+<arg>${url_disappearing_elements}</arg>
+<status status="PASS" start="2024-11-03T17:52:07.685269" elapsed="3.390685"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain Link" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:11.201096" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-03T17:52:11.201227" level="FAIL">Page should have contained link 'Gallery' but did not.</msg>
+<arg>${GALLERY_BUTTON}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<status status="FAIL" start="2024-11-03T17:52:11.076353" elapsed="0.126198">Page should have contained link 'Gallery' but did not.</status>
+</kw>
+<msg time="2024-11-03T17:52:11.202663" level="INFO">${is_visible} = False</msg>
+<var>${is_visible}</var>
+<arg>page should contain link</arg>
+<arg>${GALLERY_BUTTON}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-03T17:52:11.076202" elapsed="0.126486"/>
+</kw>
+<if>
+<branch type="IF" condition="'${is_visible}' == 'True'">
+<while condition="'${is_visible}' == 'True'">
+<iter>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" start="2024-11-03T17:52:11.203148" elapsed="0.000027"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-11-03T17:52:11.203252" elapsed="0.000024"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<var>${is_visible}</var>
+<arg>page should contain link</arg>
+<arg>${GALLERY_BUTTON}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" start="2024-11-03T17:52:11.203369" elapsed="0.000023"/>
+</kw>
+<status status="NOT RUN" start="2024-11-03T17:52:11.202980" elapsed="0.000453"/>
+</iter>
+<status status="NOT RUN" start="2024-11-03T17:52:11.202978" elapsed="0.000489"/>
+</while>
+<kw name="Page Should Not Contain Link" owner="SeleniumLibrary">
+<arg>${GALLERY_BUTTON}</arg>
+<doc>Verifies link identified by ``locator`` is not found from current page.</doc>
+<status status="NOT RUN" start="2024-11-03T17:52:11.203546" elapsed="0.000022"/>
+</kw>
+<status status="NOT RUN" start="2024-11-03T17:52:11.202852" elapsed="0.000750"/>
+</branch>
+<branch type="ELSE">
+<while condition="'${is_visible}' == 'False'">
+<iter>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2024-11-03T17:52:11.203862" elapsed="0.123901"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:12.328329" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:11.327925" elapsed="1.000511"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain Link" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:12.335770" level="INFO">Current page contains link 'Gallery'.</msg>
+<arg>${GALLERY_BUTTON}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<status status="PASS" start="2024-11-03T17:52:12.328760" elapsed="0.007087"/>
+</kw>
+<msg time="2024-11-03T17:52:12.335964" level="INFO">${is_visible} = True</msg>
+<var>${is_visible}</var>
+<arg>page should contain link</arg>
+<arg>${GALLERY_BUTTON}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-03T17:52:12.328613" elapsed="0.007374"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:52:11.203674" elapsed="1.132358"/>
+</iter>
+<status status="PASS" start="2024-11-03T17:52:11.203672" elapsed="1.132517"/>
+</while>
+<kw name="Page Should Contain Link" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:12.342246" level="INFO">Current page contains link 'Gallery'.</msg>
+<arg>${GALLERY_BUTTON}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<status status="PASS" start="2024-11-03T17:52:12.336314" elapsed="0.006020"/>
+</kw>
+<while condition="'${is_visible}' == 'True'">
+<iter>
+<kw name="Reload Page" owner="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" start="2024-11-03T17:52:12.342732" elapsed="0.114672"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:13.457810" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:12.457577" elapsed="1.000341"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain Link" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:13.590082" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-03T17:52:13.590199" level="FAIL">Page should have contained link 'Gallery' but did not.</msg>
+<arg>${GALLERY_BUTTON}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<status status="FAIL" start="2024-11-03T17:52:13.458237" elapsed="0.132801">Page should have contained link 'Gallery' but did not.</status>
+</kw>
+<msg time="2024-11-03T17:52:13.591155" level="INFO">${is_visible} = False</msg>
+<var>${is_visible}</var>
+<arg>page should contain link</arg>
+<arg>${GALLERY_BUTTON}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-03T17:52:13.458091" elapsed="0.133087"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:52:12.342426" elapsed="1.248799"/>
+</iter>
+<status status="PASS" start="2024-11-03T17:52:12.342425" elapsed="1.248950"/>
+</while>
+<kw name="Page Should Not Contain Link" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:13.598370" level="INFO">Current page does not contain link 'Gallery'.</msg>
+<arg>${GALLERY_BUTTON}</arg>
+<doc>Verifies link identified by ``locator`` is not found from current page.</doc>
+<status status="PASS" start="2024-11-03T17:52:13.591497" elapsed="0.006967"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:52:11.203635" elapsed="2.394899"/>
+</branch>
+<status status="PASS" start="2024-11-03T17:52:11.202831" elapsed="2.395748"/>
+</if>
+<kw name="Cerrar el navegador" owner="keywords" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:14.599280" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:13.599100" elapsed="1.000285"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-03T17:52:14.599546" elapsed="2.113255"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:52:13.598878" elapsed="3.114049"/>
+</kw>
+<doc>Este caso de prueba verifica la visibilidad del botón “Gallery” que puede aparecer y desaparecer.</doc>
+<status status="PASS" start="2024-11-03T17:52:07.684781" elapsed="9.028279"/>
+</test>
+<test id="s1-t6" name="Arrastrar Y Soltar" line="90">
+<kw name="Inicializar navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:16.714206" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/drag_and_drop'.</msg>
+<msg time="2024-11-03T17:52:16.946950" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-03T17:52:16.714041" elapsed="2.375151"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-03T17:52:19.089516" elapsed="0.030726"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:20.121029" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:19.120416" elapsed="1.000721"/>
+</kw>
+<arg>${url_drag_and_drop}</arg>
+<status status="PASS" start="2024-11-03T17:52:16.713770" elapsed="3.407468"/>
+</kw>
+<kw name="Drag And Drop" owner="SeleniumLibrary">
+<arg>${column_a}</arg>
+<arg>${column_b}</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="PASS" start="2024-11-03T17:52:20.121458" elapsed="0.549349"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:20.684726" level="INFO">${column_a_text} = B</msg>
+<var>${column_a_text}</var>
+<arg>${column_a}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:52:20.671171" elapsed="0.013637"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:20.694927" level="INFO">${column_b_text} = A</msg>
+<var>${column_b_text}</var>
+<arg>${column_b}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:52:20.685082" elapsed="0.009893"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${column_a_text}</arg>
+<arg>B</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-03T17:52:20.695209" elapsed="0.000168"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${column_b_text}</arg>
+<arg>A</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-03T17:52:20.695510" elapsed="0.000126"/>
+</kw>
+<kw name="Drag And Drop" owner="SeleniumLibrary">
+<arg>${column_b}</arg>
+<arg>${column_a}</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="PASS" start="2024-11-03T17:52:20.695765" elapsed="0.533592"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:21.239258" level="INFO">${column_a_text} = A</msg>
+<var>${column_a_text}</var>
+<arg>${column_a}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:52:21.229722" elapsed="0.009576"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:21.247947" level="INFO">${column_b_text} = B</msg>
+<var>${column_b_text}</var>
+<arg>${column_b}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:52:21.239527" elapsed="0.008457"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${column_a_text}</arg>
+<arg>A</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-03T17:52:21.248238" elapsed="0.000159"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${column_b_text}</arg>
+<arg>B</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-03T17:52:21.248661" elapsed="0.000243"/>
+</kw>
+<kw name="Cerrar el navegador" owner="keywords" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:22.249870" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:21.249473" elapsed="1.000502"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-03T17:52:22.250137" elapsed="2.110742"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:52:21.249242" elapsed="3.111753"/>
+</kw>
+<doc>Este caso de prueba verifica la funcionalidad de arrastrar y soltar entre las cajas A y B.</doc>
+<status status="PASS" start="2024-11-03T17:52:16.713393" elapsed="7.647737"/>
+</test>
+<test id="s1-t7" name="Verificar la Funcionalidad de Eliminar y Anadir el Elemento Checkbox" line="108">
+<kw name="Inicializar navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:24.362331" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/dynamic_controls'.</msg>
+<msg time="2024-11-03T17:52:24.595583" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-03T17:52:24.362172" elapsed="2.362398"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-03T17:52:26.724932" elapsed="0.026335"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:27.752091" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:26.751444" elapsed="1.000753"/>
+</kw>
+<arg>${url_dynamic_controls}</arg>
+<status status="PASS" start="2024-11-03T17:52:24.361904" elapsed="3.390389"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:27.752689" level="INFO">Clicking button 'Remove'.</msg>
+<arg>Remove</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:52:27.752517" elapsed="0.043275"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>id:checkbox</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-11-03T17:52:27.796056" elapsed="3.135807"/>
+</kw>
+<kw name="Page Should Not Contain Checkbox" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:30.935694" level="INFO">Current page does not contain checkbox 'id:checkbox'.</msg>
+<arg>id:checkbox</arg>
+<doc>Verifies checkbox ``locator`` is not found from the current page.</doc>
+<status status="PASS" start="2024-11-03T17:52:30.932107" elapsed="0.003640"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:31.936208" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:30.935924" elapsed="1.000393"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:31.936718" level="INFO">Clicking button 'Add'.</msg>
+<arg>Add</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:52:31.936559" elapsed="0.035838"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:checkbox</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-03T17:52:31.972661" elapsed="3.073107"/>
+</kw>
+<kw name="Page Should Contain Checkbox" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:35.056962" level="INFO">Current page contains checkbox 'id:checkbox'.</msg>
+<arg>id:checkbox</arg>
+<doc>Verifies checkbox ``locator`` is found from the current page.</doc>
+<status status="PASS" start="2024-11-03T17:52:35.046019" elapsed="0.011023"/>
+</kw>
+<kw name="Cerrar el navegador" owner="keywords" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:36.057796" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:35.057568" elapsed="1.000385"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-03T17:52:36.058148" elapsed="2.125094"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:52:35.057352" elapsed="3.126012"/>
+</kw>
+<doc>Este caso de prueba verifica la funcionalidad de eliminar y añadir elementos.</doc>
+<status status="PASS" start="2024-11-03T17:52:24.361466" elapsed="13.822192"/>
+</test>
+<test id="s1-t8" name="Verificar que el Menu Flotante Sigue Siendo Visible al Desplazarse al Final de la Pagina" line="119">
+<kw name="Inicializar navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:38.184879" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/floating_menu'.</msg>
+<msg time="2024-11-03T17:52:38.419078" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-03T17:52:38.184710" elapsed="2.374563"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-03T17:52:40.559659" elapsed="0.030711"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:41.590994" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:40.590591" elapsed="1.000508"/>
+</kw>
+<arg>${url_floating_menu}</arg>
+<status status="PASS" start="2024-11-03T17:52:38.184424" elapsed="3.406775"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:41.591752" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-11-03T17:52:41.591421" elapsed="0.004581"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:42.596862" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:41.596239" elapsed="1.000730"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:42.610678" level="INFO">Element 'id:menu' is displayed.</msg>
+<arg>id:menu</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-03T17:52:42.597215" elapsed="0.013546"/>
+</kw>
+<kw name="Cerrar el navegador" owner="keywords" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:43.611735" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:42.611310" elapsed="1.000533"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-03T17:52:43.612002" elapsed="2.110811"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:52:42.611091" elapsed="3.111853"/>
+</kw>
+<doc>Este caso de prueba verifica la funcionalidad del menu flotante.</doc>
+<status status="PASS" start="2024-11-03T17:52:38.184062" elapsed="7.539015"/>
+</test>
+<test id="s1-t9" name="Verificar Inicio de Sesion Exitoso" line="126">
+<kw name="Inicializar navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:45.724297" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<msg time="2024-11-03T17:52:45.956138" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-03T17:52:45.724135" elapsed="2.453295"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-03T17:52:48.177642" elapsed="0.029142"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:49.207554" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:48.206945" elapsed="1.000715"/>
+</kw>
+<arg>${url_login}</arg>
+<status status="PASS" start="2024-11-03T17:52:45.723865" elapsed="3.483942"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:49.208188" level="INFO">Typing text 'tomsmith' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>tomsmith</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:52:49.208029" elapsed="0.064284"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:49.272770" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-11-03T17:52:49.294729" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>SuperSecretPassword!</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:52:49.272603" elapsed="0.059879"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:50.333016" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:49.332778" elapsed="1.000345"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:50.333545" level="INFO">Clicking button 'Login'.</msg>
+<arg>Login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:52:50.333377" elapsed="0.262223"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:50.608758" level="INFO">Current page contains text 'You logged into a secure area!'.</msg>
+<arg>You logged into a secure area!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-03T17:52:50.595908" elapsed="0.012949"/>
+</kw>
+<kw name="Cerrar el navegador" owner="keywords" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:51.610117" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:50.609517" elapsed="1.000705"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-03T17:52:51.610381" elapsed="2.117288"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:52:50.609186" elapsed="3.118625"/>
+</kw>
+<doc>Este caso de prueba verifica el inicio de sesion con credenciales correctas.</doc>
+<status status="PASS" start="2024-11-03T17:52:45.723475" elapsed="8.004489"/>
+</test>
+<test id="s1-t10" name="Verificar Cierre de Sesion Exitoso" line="135">
+<kw name="Inicializar navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:53.729160" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<msg time="2024-11-03T17:52:53.965578" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-03T17:52:53.729000" elapsed="2.501807"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-03T17:52:56.231002" elapsed="0.026940"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:57.258475" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:56.258107" elapsed="1.000475"/>
+</kw>
+<arg>${url_login}</arg>
+<status status="PASS" start="2024-11-03T17:52:53.728728" elapsed="3.529950"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:57.259183" level="INFO">Typing text 'tomsmith' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>tomsmith</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:52:57.258991" elapsed="0.064883"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:57.324336" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-11-03T17:52:57.345871" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>SuperSecretPassword!</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:52:57.324156" elapsed="0.058301"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:58.383441" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:57.382771" elapsed="1.000776"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:58.383944" level="INFO">Clicking button 'Login'.</msg>
+<arg>Login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:52:58.383786" elapsed="0.258646"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:58.657912" level="INFO">Current page contains text 'You logged into a secure area!'.</msg>
+<arg>You logged into a secure area!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-03T17:52:58.642858" elapsed="0.015154"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:52:59.658549" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:58.658282" elapsed="1.000372"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:59.659054" level="INFO">Clicking link 'Logout'.</msg>
+<arg>Logout</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:52:59.658892" elapsed="0.246687"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:52:59.914644" level="INFO">Current page contains text 'You logged out of the secure area!'.</msg>
+<arg>You logged out of the secure area!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-03T17:52:59.906003" elapsed="0.008724"/>
+</kw>
+<kw name="Cerrar el navegador" owner="keywords" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:53:00.915620" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:52:59.915384" elapsed="1.000341"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-03T17:53:00.915882" elapsed="2.119803"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:52:59.915133" elapsed="3.120672"/>
+</kw>
+<doc>Este caso de prueba verifica el cierre de sesion.</doc>
+<status status="PASS" start="2024-11-03T17:52:53.728353" elapsed="9.307593"/>
+</test>
+<test id="s1-t11" name="Verificar Inicio de Sesion Fallido con Username Incorrecto" line="147">
+<kw name="Inicializar navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:53:03.037208" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<msg time="2024-11-03T17:53:03.268316" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-03T17:53:03.037047" elapsed="2.456788"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-03T17:53:05.494072" elapsed="0.025718"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:53:06.520439" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:53:05.519958" elapsed="1.000587"/>
+</kw>
+<arg>${url_login}</arg>
+<status status="PASS" start="2024-11-03T17:53:03.036781" elapsed="3.483861"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:53:06.521045" level="INFO">Typing text 'tomsmith1' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>tomsmith1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:53:06.520878" elapsed="0.066750"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:53:06.588161" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-11-03T17:53:06.609003" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>SuperSecretPassword!</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:53:06.587922" elapsed="0.057875"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:53:06.646236" level="INFO">Clicking button 'Login'.</msg>
+<arg>Login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:53:06.646082" elapsed="0.258721"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:flash-messages</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-03T17:53:06.905100" elapsed="0.015736"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:53:06.929779" level="INFO">Current page contains text 'Your username is invalid!'.</msg>
+<arg>Your username is invalid!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-03T17:53:06.921087" elapsed="0.008780"/>
+</kw>
+<kw name="Cerrar el navegador" owner="keywords" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:53:07.930654" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:53:06.930441" elapsed="1.000316"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-03T17:53:07.930914" elapsed="2.101326"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:53:06.930195" elapsed="3.102168"/>
+</kw>
+<doc>Este caso de prueba verifica el inicio de sesion fallido con username incorrecto.</doc>
+<status status="PASS" start="2024-11-03T17:53:03.036338" elapsed="6.996170"/>
+</test>
+<test id="s1-t12" name="Verificar Inicio de Sesion Fallido con Password Incorrecto" line="156">
+<kw name="Inicializar navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:53:10.033850" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<msg time="2024-11-03T17:53:10.266905" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-03T17:53:10.033686" elapsed="2.455113"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-03T17:53:12.489048" elapsed="0.029819"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:53:13.519459" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:53:12.519076" elapsed="1.000490"/>
+</kw>
+<arg>${url_login}</arg>
+<status status="PASS" start="2024-11-03T17:53:10.033422" elapsed="3.486239"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:53:13.520047" level="INFO">Typing text 'tomsmith' into text field 'id:username'.</msg>
+<arg>id:username</arg>
+<arg>tomsmith</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:53:13.519886" elapsed="0.065383"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:53:13.585806" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-11-03T17:53:13.607840" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id:password</arg>
+<arg>SuperS1ecretPassword!</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:53:13.585594" elapsed="0.059264"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:53:13.645244" level="INFO">Clicking button 'Login'.</msg>
+<arg>Login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:53:13.645100" elapsed="0.263299"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:flash-messages</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-03T17:53:13.908686" elapsed="0.015181"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:53:13.933064" level="INFO">Current page contains text 'Your password is invalid!'.</msg>
+<arg>Your password is invalid!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-03T17:53:13.924179" elapsed="0.008974"/>
+</kw>
+<kw name="Cerrar el navegador" owner="keywords" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:53:14.934219" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:53:13.933856" elapsed="1.000470"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-03T17:53:14.934481" elapsed="2.094179"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:53:13.933500" elapsed="3.095273"/>
+</kw>
+<doc>Este caso de prueba verifica el inicio de sesion fallido con password incorrecto.</doc>
+<status status="PASS" start="2024-11-03T17:53:10.032973" elapsed="6.996002"/>
+</test>
+<test id="s1-t13" name="Verificar funcionaliadad Teclas presionadas" line="165">
+<kw name="Inicializar navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:53:17.030163" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/key_presses'.</msg>
+<msg time="2024-11-03T17:53:17.262180" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${url}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-03T17:53:17.029993" elapsed="2.459320"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-03T17:53:19.489784" elapsed="0.038550"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:53:20.529000" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:53:19.528520" elapsed="1.000590"/>
+</kw>
+<arg>${URL_KEY_PRESSES}</arg>
+<status status="PASS" start="2024-11-03T17:53:17.029710" elapsed="3.499497"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:53:22.529719" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:53:20.529424" elapsed="2.000403"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:53:22.530413" level="INFO">Sending key(s) ('ESC',) to id=target element.</msg>
+<msg time="2024-11-03T17:53:22.806965" level="INFO">Pressing special key ESCAPE to element.</msg>
+<msg time="2024-11-03T17:53:22.807051" level="INFO">Releasing special key ESCAPE.</msg>
+<arg>id=target</arg>
+<arg>ESC</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-11-03T17:53:22.530086" elapsed="0.282182"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=result</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-03T17:53:22.812623" elapsed="0.013498"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:53:22.839595" level="INFO">${mensaje} = You entered: ESCAPE</msg>
+<var>${mensaje}</var>
+<arg>id=result</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:53:22.826367" elapsed="0.013268"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${mensaje}</arg>
+<arg>You entered: ESCAPE</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-03T17:53:22.839866" elapsed="0.000171"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:53:22.840449" level="INFO">Sending key(s) ('SPACE',) to id=target element.</msg>
+<msg time="2024-11-03T17:53:23.111640" level="INFO">Pressing special key SPACE to element.</msg>
+<msg time="2024-11-03T17:53:23.111718" level="INFO">Releasing special key SPACE.</msg>
+<arg>id=target</arg>
+<arg>SPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-11-03T17:53:22.840174" elapsed="0.275940"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=result</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-03T17:53:23.116410" elapsed="0.008932"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-03T17:53:23.135135" level="INFO">${mensaje} = You entered: SPACE</msg>
+<var>${mensaje}</var>
+<arg>id=result</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-03T17:53:23.125721" elapsed="0.009456"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${mensaje}</arg>
+<arg>You entered: SPACE</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-03T17:53:23.135468" elapsed="0.000167"/>
+</kw>
+<kw name="Cerrar el navegador" owner="keywords" type="TEARDOWN">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-03T17:53:24.136592" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-03T17:53:23.136040" elapsed="1.000658"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-03T17:53:24.136851" elapsed="2.106739"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:53:23.135851" elapsed="3.107857"/>
+</kw>
+<status status="PASS" start="2024-11-03T17:53:17.029365" elapsed="9.214488"/>
+</test>
+<status status="PASS" start="2024-11-03T17:51:34.432220" elapsed="111.812236"/>
+</suite>
+<statistics>
+<total>
+<stat pass="13" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="13" fail="0" skip="0" id="s1" name="TestCases1 10">TestCases1 10</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-11-03T17:51:34.933770" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-03T17:51:42.928234" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-03T17:51:48.511398" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-03T17:51:53.365886" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-03T17:52:00.118260" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-03T17:52:07.917752" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-03T17:52:16.946950" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-03T17:52:24.595583" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-03T17:52:38.419078" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-03T17:52:45.956138" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-03T17:52:53.965578" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-03T17:53:03.268316" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-03T17:53:10.266905" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-11-03T17:53:17.262180" level="WARN">The chromedriver version (129.0.6668.100) detected in PATH at D:\WebDrivers\bin\chromedriver.exe might not be compatible with the detected chrome version (130.0.6723.92); currently, chromedriver 130.0.6723.91 is recommended for chrome 130.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

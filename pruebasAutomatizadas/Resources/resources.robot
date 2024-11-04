@@ -19,6 +19,7 @@ ${URL_DISAPPEARING_ELEMENTS}    https://the-internet.herokuapp.com/disappearing_
 ${URL_DRAG_AND_DROP}    https://the-internet.herokuapp.com/drag_and_drop
 ${alert_text}    You selected a context menu
 ${is_alert_open}    False
+${GALLERY_BUTTON}    Gallery
 ${COLUMN_A}    css:#column-a
 ${COLUMN_B}    css:#column-b
 
@@ -26,4 +27,8 @@ ${COLUMN_B}    css:#column-b
 ${URL_DYNAMIC_CONTROLS}    https://the-internet.herokuapp.com/dynamic_controls
 ${URL_FLOATING_MENU}    https://the-internet.herokuapp.com/floating_menu
 ${URL_LOGIN}    https://the-internet.herokuapp.com/login
+
+#RESOURCES - TEST CASE 10
+${URL_KEY_PRESSES}    https://the-internet.herokuapp.com/key_presses
+
 

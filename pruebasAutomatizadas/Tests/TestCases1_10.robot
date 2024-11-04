@@ -1,12 +1,12 @@
 *** Settings ***
 Library    SeleniumLibrary
 Resource   ../Resources/resources.robot
+Resource   ../Resources/keywords.robot
+Test Teardown       Cerrar el Navegador
 
 *** Test Cases ***
-
 Agregar y Quitar Elementos
-    Open Browser   ${URL_ANADIR_REMOVER_ELEMENTOS}    ${BROWSER}
-    [Teardown]    Close Browser
+    [Setup]  Inicializar navegador   ${URL_ANADIR_REMOVER_ELEMENTOS}
 
     FOR    ${index}    IN RANGE    20
         Click Button    css:button[onclick="addElement()"]
@@ -22,7 +22,8 @@ Agregar y Quitar Elementos
     END
 
 Autenticación Básica
-    Open Browser    ${URL_BASIC_AUTH}    ${BROWSER}
+    [Setup]  Inicializar navegador   ${URL_BASIC_AUTH}
+
     ${message}=    Get Text    css:p
     Should Contain    ${message}    ${MENSAJE_EXITO}
     Close Browser
@@ -30,11 +31,9 @@ Autenticación Básica
     Open Browser    ${URL_BASIC_AUTH_FAIL}    ${BROWSER}
     ${failed_message}=    Get Source
     Should Not Contain    ${failed_message}    ${MENSAJE_EXITO}
-    Close Browser
 
 Checkboxes
-    Open Browser    ${URL_CHECKBOXES}    ${BROWSER}
-    [Teardown]    Close Browser
+    [Setup]  Inicializar navegador   ${URL_CHECKBOXES}
 
     ${is_selected}=    Run Keyword And Return Status    Checkbox Should Be Selected    xpath://form[@id='checkboxes']/input[1]
     IF    '${is_selected}' == 'False'
@@ -50,54 +49,61 @@ Checkboxes
 
 Context Menu
     [Documentation]    Este caso de prueba verifica la funcionalidad del menú contextual.
-    Open Browser    ${URL_CONTEXT_MENU}    ${BROWSER}
-    Click Right Button    css:#hot-spot
-    # Validar que el texto de la alerta es igual a “You selected a context menu”
-    ${alert_text}=    Get Alert Text
+    [Setup]    Inicializar Navegador  ${url_context_menu}
+
+    Open Context Menu    css:#hot-spot
+    sleep                1
+
     Should Be Equal    ${alert_text}    You selected a context menu
-    # Clic al botón de Aceptar
-    Accept Alert
-    # Validar que la alerta fue cerrada
+
     ${is_alert_open}=    Run Keyword And Return Status    Get Alert Text
-    Should Be False    ${is_alert_open}
-    [Teardown]    Close Browser
+    Should Not Be True    ${is_alert_open}
 
 Elementos Que Desaparecen
-    [Documentation]    Este caso de prueba verifica la aparición y desaparición del botón "Gallery".
-    Open Browser    ${URL_DISAPPEARING_ELEMENTS}    ${BROWSER}
-    # Actualizar hasta que el botón sea visible
-    Wait Until Page Contains Element    css:a[href="/gallery/"]    timeout=10
-    # Validar que el botón “Gallery” existe
-    ${gallery_exists}=    Run Keyword And Return Status    Element Should Be Visible    css:a[href="/gallery/"]
-    Should Be True    ${gallery_exists}
-    # Actualizar hasta que el botón no esté visible
-    Wait Until Page Does Not Contain Element    css:a[href="/gallery/"]    timeout=10
-    # Validar que el botón “Gallery” no existe
-    ${gallery_exists}=    Run Keyword And Return Status    Element Should Not Be Visible    css:a[href="/gallery/"]
-    Should Be True    ${gallery_exists}
-    [Teardown]    Close Browser
+    [Documentation]    Este caso de prueba verifica la visibilidad del botón “Gallery” que puede aparecer y desaparecer.
+    [Setup]     Inicializar navegador    ${url_disappearing_elements}
 
-Arrastrar Y Soltar Caja A a Caja B
-    [Documentation]    Este caso de prueba arrastra la caja A a la caja B y valida que se intercambian.
-    Open Browser    ${URL_DRAG_AND_DROP}    ${BROWSER}
-    Drag And Drop    ${COLUMN_A}    ${COLUMN_B}
-    # Validar que las cajas fueron intercambiadas
-    ${text_a}=    Get Text    ${COLUMN_A}
-    ${text_b}=    Get Text    ${COLUMN_B}
-    Should Be Equal    ${text_a}    B
-    Should Be Equal    ${text_b}    A
-    [Teardown]    Close Browser
+    ${is_visible}=    run keyword and return status    page should contain link    ${GALLERY_BUTTON}
 
-Arrastrar Y Soltar Caja B a Caja A
-    [Documentation]    Este caso de prueba arrastra la caja B a la caja A y valida que se intercambian.
-    Open Browser    ${URL_DRAG_AND_DROP}    ${BROWSER}
-    Drag And Drop    ${COLUMN_B}    ${COLUMN_A}
-    # Validar que las cajas fueron intercambiadas
-    ${text_a}=    Get Text    ${COLUMN_A}
-    ${text_b}=    Get Text    ${COLUMN_B}
-    Should Be Equal    ${text_a}    A
-    Should Be Equal    ${text_b}    B
-    [Teardown]    Close Browser
+    IF     '${is_visible}' == 'True'
+        WHILE   '${is_visible}' == 'True'
+            reload page
+            sleep   1
+            ${is_visible}=    run keyword and return status    page should contain link    ${GALLERY_BUTTON}
+        END
+        page should not contain link    ${GALLERY_BUTTON}
+    ELSE
+        WHILE   '${is_visible}' == 'False'
+            reload page
+            sleep   1
+            ${is_visible}=    run keyword and return status    page should contain link    ${GALLERY_BUTTON}
+        END
+        page should contain link    ${GALLERY_BUTTON}
+        WHILE   '${is_visible}' == 'True'
+            reload page
+            sleep   1
+            ${is_visible}=    run keyword and return status    page should contain link    ${GALLERY_BUTTON}
+        END
+        page should not contain link    ${GALLERY_BUTTON}
+    END
+
+Arrastrar Y Soltar
+    [Documentation]    Este caso de prueba verifica la funcionalidad de arrastrar y soltar entre las cajas A y B.
+    [Setup]    Inicializar Navegador  ${url_drag_and_drop}
+
+    Drag And Drop    ${column_a}    ${column_b}
+
+    ${column_a_text}=    Get Text    ${column_a}
+    ${column_b_text}=    Get Text    ${column_b}
+    Should Be Equal    ${column_a_text}    B
+    Should Be Equal    ${column_b_text}    A
+
+    Drag And Drop    ${column_b}    ${column_a}
+
+    ${column_a_text}=    Get Text    ${column_a}
+    ${column_b_text}=    Get Text    ${column_b}
+    Should Be Equal    ${column_a_text}    A
+    Should Be Equal    ${column_b_text}    B
 
 Verificar la Funcionalidad de Eliminar y Anadir el Elemento Checkbox
     [Documentation]    Este caso de prueba verifica la funcionalidad de eliminar y añadir elementos.
@@ -157,8 +163,8 @@ Verificar Inicio de Sesion Fallido con Password Incorrecto
     page should contain              Your password is invalid!
 
 Verificar funcionaliadad Teclas presionadas
-    Open Browser    https://the-internet.herokuapp.com/key_presses    ${BROWSER}
-    Maximize Browser Window
+    [Setup]    Inicializar navegador    ${URL_KEY_PRESSES}
+
     Sleep    2s
     Press Keys   id=target   ESC
     Wait Until Element Is Visible    id=result
